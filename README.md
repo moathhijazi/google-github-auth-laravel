@@ -1,6 +1,10 @@
 # google-github-auth-laravel
 github and google auth using laravel
 
+you should install 
+
+[composer require laravel/socialite] 
+
 
 add to your .env file : 
 
