@@ -27,7 +27,7 @@ class auth extends Controller
 
             return $random ;
         }
-        $githubUser = Socialite::driver('github')->user();
+        $githubUser = Socialite::driver('github')->stateless()->user();
         $user = DB::table('users')->updateOrInsert(['provider_id' => $githubUser->id,],[
 
 
@@ -67,7 +67,7 @@ class auth extends Controller
 
             return $random ;
         }
-        $githubUser = Socialite::driver('google')->user();
+        $githubUser = Socialite::driver('google')->stateless()->user();
         $user = DB::table('users')->updateOrInsert(['provider_id' => $githubUser->id,],[
 
 
